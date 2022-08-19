@@ -76,34 +76,3 @@ for i in range(-1,20):
 
 
 
-#   contoh program menggunakan stack 
-#   membentuk reverse word
-
-
-
-def create_stack():
-    stack = []
-    return stack
-#   untuk memasukan stack
-def pushStack(stack,kalimat):
-    stack[:0] = kalimat
-    return stack
-
-def dibalik_kalimat(stack,new_stack):
-    for i in range(0,len(stack)):
-        stackPoped = stack.pop()
-
-        new_stack.append(stackPoped)
-    return new_stack
-    
-
-stack = create_stack()
-reversed_stack = create_stack()
-
-isi_stack = pushStack(stack,"jupri")
-print(isi_stack)
-
-stack_dibalik = dibalik_kalimat(isi_stack,reversed_stack)
-print(isi_stack)
-
-print(stack_dibalik)
