@@ -2,6 +2,7 @@ class Stack {
     constructor() {
         this.barang = []
         this.angka = 0
+        this.maximum = 32
     }
 
     //menambahkan elemen ke tumpukan
@@ -32,22 +33,32 @@ class Stack {
         console.log(this.angka == 0 ? 'Tumpukan Kosong' : 'Tumpukan tidak kosong')
         return this.angka == 0
     }
+    isfull(){
+        console.log(this.angka == this.maximum ? 'tumpukan penuh ': 'tumpukan belum penuh' )
+        return this.maximum == this.angka 
+    }
 }
 
 const stack = new Stack()
+var isi = 100;
 
-stack.push(100)
-stack.push(200)
-stack.push(300)
-stack.push(400)
-stack.push(500)
 
-stack.pop()
-stack.pop()
-stack.pop()
 
+for (let i = 0;i < stack.maximum;i++){
+    stack.push(isi)
+    isi+=100
+} 
+
+for (let i = 0;i< stack.maximum;i++){
+    if (i <= 5){
+        stack.pop()
+    }
+    
+
+
+}
 stack.isEmpty()
-
+stack.isfull()
 stack.peek()
 
 
